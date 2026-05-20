@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Registration & EMR Portal</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f8fb;
+      color:#333;
+    }
+
+    /* Navbar */
+    nav{
+      background:#0a66c2;
+      color:white;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+    }
+
+    .nav-buttons button{
+      padding:10px 18px;
+      border:none;
+      margin-left:10px;
+      border-radius:5px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .login-btn{
+      background:white;
+      color:#0a66c2;
+    }
+
+    .register-btn{
+      background:#ff9800;
+      color:white;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1584982751601-97dcc096659c');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      max-width:800px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    .hero-buttons{
+      margin-top:30px;
+    }
+
+    .hero-buttons button{
+      padding:14px 25px;
+      margin:10px;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .start-btn{
+      background:#ff9800;
+      color:white;
+    }
+
+    .learn-btn{
+      background:white;
+      color:#0a66c2;
+    }
+
+    /* About Section */
+    .about{
+      padding:70px 50px;
+      text-align:center;
+      background:white;
+    }
+
+    .about h2{
+      font-size:36px;
+      color:#0a66c2;
+      margin-bottom:20px;
+    }
+
+    .about p{
+      max-width:900px;
+      margin:auto;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    /* Features Section */
+    .features{
+      padding:70px 50px;
+      background:#eef5fc;
+      text-align:center;
+    }
+
+    .features h2{
+      font-size:36px;
+      margin-bottom:40px;
+      color:#0a66c2;
+    }
+
+    .feature-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .feature-box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .feature-box:hover{
+      transform:translateY(-5px);
+    }
+
+    .feature-box h3{
+      margin-bottom:15px;
+      color:#0a66c2;
+    }
+
+    /* CTA Section */
+    .cta{
+      background:#0a66c2;
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .cta h2{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .cta button{
+      padding:15px 30px;
+      border:none;
+      border-radius:5px;
+      background:#ff9800;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    /* Footer */
+    footer{
+      background:#062b52;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero-content h2{
+        font-size:35px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>MediCare EMR</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button class="login-btn">Login</button>
+      <button class="register-btn">Register</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Smart Healthcare Starts with Digital Records</h2>
+
+      <p>
+        A secure and efficient Patient Registration & Electronic Medical Record
+        (EMR) Portal for managing patient information, medical history,
+        prescriptions, allergies, insurance details, and healthcare services.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="start-btn">Get Started</button>
+        <button class="learn-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Our EMR Portal</h2>
+
+    <p>
+      The Patient Registration & Electronic Medical Record (EMR) Portal is a
+      modern healthcare management system developed to reduce paperwork,
+      improve patient data accessibility, and enhance hospital efficiency.
+      The system securely stores patient information and enables healthcare
+      providers to access medical records anytime and anywhere.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Key Features</h2>
+
+    <div class="feature-container">
+
+      <div class="feature-box">
+        <h3>Patient Registration</h3>
+        <p>Quick and secure digital patient onboarding process.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Medical Records</h3>
+        <p>Maintain complete electronic medical history of patients.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Insurance Details</h3>
+        <p>Store and manage insurance information efficiently.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Emergency Contacts</h3>
+        <p>Access patient emergency information instantly.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Secure System</h3>
+        <p>Highly secure platform with protected patient data.</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>User Friendly</h3>
+        <p>Easy-to-use interface for hospitals and patients.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>Transform Healthcare with Digital Solutions</h2>
+    <button>Register Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 MediCare EMR Portal | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
